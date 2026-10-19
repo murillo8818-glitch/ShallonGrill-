@@ -1,0 +1,90 @@
+// ============================================================================
+//  prisma/schema.prisma — A "PLANTA BAIXA" DO BANCO DE DADOS
+// ----------------------------------------------------------------------------
+//  Aqui descrevemos QUAIS TABELAS existem e QUAIS COLUNAS cada uma tem.
+//  O Prisma lê este arquivo e:
+//    1) cria as tabelas no Postgres (npm run db:push)
+//    2) gera o "prisma client" (objeto `prisma` que usamos no código JS)
+//
+//  ⚠️ Mudou algo aqui? Rode `npm run db:push` e depois reinicie o `npm run dev`.
+// ============================================================================
+
+// Gerador: diz ao Prisma para criar o cliente JavaScript (@prisma/client)
+generator client {
+  provider        = "prisma-client-js"
+  // "driverAdapters" permite usar o driver do Neon que conecta pela porta 443
+  // (HTTPS/WebSocket). Necessário porque a rede do dono bloqueia a porta 5432.
+  previewFeatures = ["driverAdapters"]
+}
+
+// Fonte de dados: qual banco usamos e onde ele está (URL vem do arquivo .env)
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── TABELA: Admin ──────────────────────────────────────────────────────────
+// Quem pode entrar no Painel do Dono (/admin). A senha NUNCA é salva pura:
+// salvamos um "hash" (embaralhado) gerado pelo bcrypt.
+model Admin {
+  id        Int      @id @default(autoincrement()) // 1, 2, 3...
+  email     String   @unique                        // login (não pode repetir)
+  password  String                                  // hash bcrypt da senha
+  name      String   @default("Administrador")      // nome mostrado no painel
+  createdAt DateTime @default(now())                // data de criação
+}
+
+// ─── TABELA: Category (abas do cardápio: Espetos, Bebidas...) ───────────────
+model Category {
+  id       Int       @id @default(autoincrement())
+  name     String                      // "Espetos"
+  slug     String    @unique           // "espetos" (sem acento/espaço, usado em IDs)
+  icon     String    @default("🍽️")   // emoji mostrado na aba
+  order    Int       @default(0)       // ordem das abas (1 aparece primeiro)
+  products Product[]                   // relação: uma categoria TEM vários produtos
+}
+
+// ─── TABELA: Product (itens do cardápio) ────────────────────────────────────
+model Product {
+  id          Int         @id @default(autoincrement())
+  name        String                 // "Espetinho de Carne"
+  description String?                // "?" = opcional
+  price       Float                  // 8.00
+  imageUrl    String?                // link da foto (https://... ou /images/...)
+  active      Boolean     @default(true)  // false = escondido do cardápio
+  featured    Boolean     @default(false) // true = selo "⭐ Destaque" e aparece primeiro
+  categoryId  Int                         // a qual categoria pertence
+  category    Category    @relation(fields: [categoryId], references: [id])
+  orderItems  OrderItem[]                 // em quais pedidos já apareceu
+  createdAt   DateTime    @default(now())
+}
+
+// ─── TABELA: Order (pedido feito pelo cliente) ──────────────────────────────
+model Order {
+  id            String      @id @default(cuid()) // id aleatório tipo "clx8a9..."
+  customerName  String                           // nome do cliente
+  customerPhone String                           // WhatsApp do cliente
+  type          String                           // "mesa" | "entrega"
+  tableNumber   Int?                             // nº da mesa (se type = mesa)
+  address       String?                          // endereço (se type = entrega)
+  // Fluxo do status: RECEBIDO → PREPARANDO → PRONTO → (SAIU_ENTREGA) → CONCLUIDO
+  //                  qualquer momento → CANCELADO
+  status        String      @default("RECEBIDO")
+  total         Float                            // calculado NO SERVIDOR (seguro)
+  notes         String?                          // "sem cebola", etc.
+  items         OrderItem[]                      // itens do pedido
+  createdAt     DateTime    @default(now())      // hora que o pedido chegou
+  updatedAt     DateTime    @updatedAt           // atualizado sozinho a cada mudança
+}
+
+// ─── TABELA: OrderItem (cada linha do pedido: "2x Espetinho de Carne") ──────
+model OrderItem {
+  id        Int     @id @default(autoincrement())
+  orderId   String
+  productId Int
+  quantity  Int                                  // quantidade
+  price     Float                                // preço UNITÁRIO no momento da compra
+  // onDelete: Cascade → se apagar o pedido, apaga os itens dele junto
+  order     Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product   Product @relation(fields: [productId], references: [id])
+}
