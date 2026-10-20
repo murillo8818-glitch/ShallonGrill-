@@ -55,19 +55,49 @@ async function main() {
   }
   console.log(`✅ ${CATEGORIAS.length} categorias prontas`);
 
-  // 3) PRODUTOS — só cria os que ainda não existem (compara pelo nome)
+  // 3) PRODUTOS — cria novos e atualiza dados dos já existentes (preço, descrição, etc.)
   let criados = 0;
+  let atualizados = 0;
+  const nomesOficiais = new Set(PRODUTOS.map((p) => p.name));
+
   for (const { cat, img, ...p } of PRODUTOS) {
-    if (!(await prisma.product.findFirst({ where: { name: p.name } }))) {
-      const temFoto = img && require('node:fs').existsSync(path.join(__dirname, '..', 'public', 'images', `${img}.jpg`));
+    const temFoto = img && require('node:fs').existsSync(path.join(__dirname, '..', 'public', 'images', `${img}.jpg`));
+    const existente = await prisma.product.findFirst({ where: { name: p.name } });
+
+    if (!existente) {
       await prisma.product.create({
-        data: { ...p, categoryId: idPorSlug[cat], imageUrl: temFoto ? `/images/${img}.jpg` : null },
+        data: {
+          ...p,
+          categoryId: idPorSlug[cat],
+          imageUrl: temFoto ? `/images/${img}.jpg` : null,
+          active: true,
+        },
       });
       criados++;
+    } else {
+      await prisma.product.update({
+        where: { id: existente.id },
+        data: {
+          price: p.price,
+          description: p.description ?? null,
+          featured: !!p.featured,
+          categoryId: idPorSlug[cat],
+          active: true,
+          ...(temFoto && !existente.imageUrl ? { imageUrl: `/images/${img}.jpg` } : {}),
+        },
+      });
+      atualizados++;
     }
   }
-  console.log(`✅ ${criados} produtos novos criados (${PRODUTOS.length} no total)`);
-  console.log('🎉 Seed concluído!');
+
+  // Desativa produtos que não fazem parte do cardápio oficial
+  const desativados = await prisma.product.updateMany({
+    where: { name: { notIn: Array.from(nomesOficiais) }, active: true },
+    data: { active: false },
+  });
+
+  console.log(`✅ ${criados} produtos criados, ${atualizados} atualizados, ${desativados.count} desativados`);
+  console.log('🎉 Seed concluído com preços e dados atualizados!');
 }
 
 main()

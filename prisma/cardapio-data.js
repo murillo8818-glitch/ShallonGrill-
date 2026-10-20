@@ -69,7 +69,8 @@ const PRODUTOS = [
   { cat: 'porcoes', name: 'Jiló com Cebola', price: 10 },
   { cat: 'porcoes', name: 'Almôndega com Bacon e Mandioca', price: 25 },
   { cat: 'porcoes', name: 'Calabresa Acebolada', price: 28 },
-  { cat: 'porcoes', name: 'Porção do Botequeiro', price: 30 },
+  { cat: 'porcoes', name: 'Porção do Botequeiro', price: 30,
+    description: 'Salsicha, azeitona, queijo, tomate e cebola.' },
 
   // ── PICANHA / CHORIZO ─────────────────────────────────────────────────────
   { cat: 'pratos', name: 'Picanha Shalon', price: 119.9, featured: true,
@@ -78,15 +79,12 @@ const PRODUTOS = [
     description: 'Serve 2 pessoas. 400g de contra filé in natura. Guarnições: arroz, feijão tropeiro, vinagrete, mandioca, batata frita e banana frita.' },
 
   // ── CERVEJAS 600ml ────────────────────────────────────────────────────────
-  { cat: 'cervejas-600', name: 'Heineken 600ml', price: 15 },
-  { cat: 'cervejas-600', name: 'Corona 600ml', price: 16 },
-  { cat: 'cervejas-600', name: 'Brahma 600ml', price: 10 },
-  { cat: 'cervejas-600', name: 'Antártica 600ml', price: 9.5 },
-  { cat: 'cervejas-600', name: 'Original 600ml', price: 12 },
+  { cat: 'cervejas-600', name: 'Heineken 600ml', price: 14.5 },
+  { cat: 'cervejas-600', name: 'Brahma 600ml', price: 9.5 },
+  { cat: 'cervejas-600', name: 'Antártica 600ml', price: 8.5 },
+  { cat: 'cervejas-600', name: 'Original 600ml', price: 11 },
   { cat: 'cervejas-600', name: 'Kaiser 600ml', price: 7.5 },
-  { cat: 'cervejas-600', name: 'Amstel 600ml', price: 10 },
-  { cat: 'cervejas-600', name: 'Stella Pure Gold 600ml', price: 16 },
-  { cat: 'cervejas-600', name: 'Stella Artois 600ml', price: 14 },
+  { cat: 'cervejas-600', name: 'Amstel 600ml', price: 9.5 },
 
   // ── SHOT LONG NECK ────────────────────────────────────────────────────────
   { cat: 'long-neck', name: 'Heineken Shot (Long Neck)', price: 7.5 },
@@ -96,7 +94,7 @@ const PRODUTOS = [
   { cat: 'long-neck', name: 'Império Ultra Long Neck', price: 7.5 },
 
   // ── CERVEJAS LATA ─────────────────────────────────────────────────────────
-  { cat: 'cervejas-lata', name: 'Original Lata', price: 8 },
+  { cat: 'cervejas-lata', name: 'Original Lata', price: 5 },
   { cat: 'cervejas-lata', name: 'Brahma Lata', price: 4.5 },
   { cat: 'cervejas-lata', name: 'Antártica Azul Lata', price: 4.5 },
   { cat: 'cervejas-lata', name: 'Amstel Lata', price: 4.5 },
@@ -140,7 +138,7 @@ const PRODUTOS = [
   { cat: 'adicionais', name: 'Mandioca', price: 5 },
   { cat: 'adicionais', name: 'Banana Frita', price: 4 },
   { cat: 'adicionais', name: 'Ovo Frito', price: 4 },
-  { cat: 'adicionais', name: 'Vinagrete', price: 4 },
+  { cat: 'adicionais', name: 'Vinagrete', price: 6 },
   { cat: 'adicionais', name: 'CDB', price: 5 },
   { cat: 'adicionais', name: 'Copo Especial', price: 3 },
   { cat: 'adicionais', name: 'Tomate com Cebola', price: 12 },
