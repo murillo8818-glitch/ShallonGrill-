@@ -1,0 +1,1432 @@
+{
+  "geradoEm": "2026-10-20T21:04:44.489Z",
+  "categorias": [
+    {
+      "id": 6,
+      "name": "Jantinha Shalon",
+      "slug": "jantinha",
+      "icon": "",
+      "order": 1
+    },
+    {
+      "id": 1,
+      "name": "Espetos",
+      "slug": "espetos",
+      "icon": "",
+      "order": 2
+    },
+    {
+      "id": 3,
+      "name": "Chapa",
+      "slug": "chapa",
+      "icon": "",
+      "order": 3
+    },
+    {
+      "id": 8,
+      "name": "Espetos Especiais",
+      "slug": "espetos-especiais",
+      "icon": "",
+      "order": 3
+    },
+    {
+      "id": 9,
+      "name": "Batata Frita",
+      "slug": "batata-frita",
+      "icon": "",
+      "order": 4
+    },
+    {
+      "id": 2,
+      "name": "Porções",
+      "slug": "porcoes",
+      "icon": "",
+      "order": 5
+    },
+    {
+      "id": 11,
+      "name": "Picanha e Chorizo",
+      "slug": "pratos",
+      "icon": "",
+      "order": 6
+    },
+    {
+      "id": 12,
+      "name": "Cervejas 600ml",
+      "slug": "cervejas-600",
+      "icon": "",
+      "order": 7
+    },
+    {
+      "id": 13,
+      "name": "Shot Long Neck",
+      "slug": "long-neck",
+      "icon": "",
+      "order": 8
+    },
+    {
+      "id": 14,
+      "name": "Cervejas Lata",
+      "slug": "cervejas-lata",
+      "icon": "",
+      "order": 9
+    },
+    {
+      "id": 15,
+      "name": "Refrigerantes Lata",
+      "slug": "refrigerantes",
+      "icon": "",
+      "order": 10
+    },
+    {
+      "id": 16,
+      "name": "Refrigerantes 1 Litro",
+      "slug": "refrigerantes-1l",
+      "icon": "",
+      "order": 11
+    },
+    {
+      "id": 17,
+      "name": "Sucos e Águas",
+      "slug": "sucos",
+      "icon": "",
+      "order": 12
+    },
+    {
+      "id": 18,
+      "name": "Doses",
+      "slug": "doses",
+      "icon": "",
+      "order": 13
+    },
+    {
+      "id": 19,
+      "name": "Adicionais",
+      "slug": "adicionais",
+      "icon": "",
+      "order": 14
+    }
+  ],
+  "produtos": [
+    {
+      "id": 1,
+      "name": "Espetinho de Carne",
+      "description": "Espetinho bovino grelhado na brasa com tempero especial da casa",
+      "price": 8,
+      "imageUrl": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500&q=80",
+      "active": false,
+      "deleted": true,
+      "featured": false,
+      "categoryId": 1,
+      "createdAt": "2026-10-07T23:33:15.504Z",
+      "_count": {
+        "orderItems": 1
+      }
+    },
+    {
+      "id": 11,
+      "name": "Picanha na Chapa",
+      "description": "Picanha grelhada na chapa quente com mandioca frita e vinagrete",
+      "price": 55,
+      "imageUrl": "https://images.unsplash.com/photo-1544025162-d76694265947?w=500&q=80",
+      "active": false,
+      "deleted": true,
+      "featured": false,
+      "categoryId": 3,
+      "createdAt": "2026-10-07T23:33:19.048Z",
+      "_count": {
+        "orderItems": 1
+      }
+    },
+    {
+      "id": 23,
+      "name": "Vinagrete",
+      "description": "Vinagrete para acompanhar carnes, espetos e porções.",
+      "price": 6,
+      "imageUrl": "/images/vinagrete.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 19,
+      "createdAt": "2026-10-07T23:33:23.623Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 26,
+      "name": "Jantinha Shalon",
+      "description": "Um espeto à sua escolha, acompanhado de arroz, feijão tropeiro, vinagrete, mandioca e banana frita.",
+      "price": 25,
+      "imageUrl": "/images/jantinha.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": true,
+      "categoryId": 6,
+      "createdAt": "2026-10-13T23:40:52.095Z",
+      "_count": {
+        "orderItems": 1
+      }
+    },
+    {
+      "id": 27,
+      "name": "Espeto de Franbacon",
+      "description": "Espeto de frango com bacon, combinando dois sabores de churrasco.",
+      "price": 12,
+      "imageUrl": "/images/espeto-franbacon.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 1,
+      "createdAt": "2026-10-13T23:40:52.454Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 28,
+      "name": "Espeto de Cupim",
+      "description": "Espeto de cupim, corte bovino tradicional do churrasco.",
+      "price": 12,
+      "imageUrl": "/images/espeto-cupim.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 1,
+      "createdAt": "2026-10-13T23:40:52.808Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 29,
+      "name": "Espeto de Capa de Filé",
+      "description": "Espeto de capa de filé, preparado para acompanhar sua jantinha.",
+      "price": 12,
+      "imageUrl": "/images/espeto-carne.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 1,
+      "createdAt": "2026-10-13T23:40:53.168Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 30,
+      "name": "Espeto de Fraldinha",
+      "description": "Espeto de fraldinha, corte bovino de sabor marcante.",
+      "price": 12,
+      "imageUrl": "/images/espeto-carne.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 1,
+      "createdAt": "2026-10-13T23:40:53.505Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 31,
+      "name": "Espeto de Coração",
+      "description": "Espeto de coração de frango, um clássico do churrasco.",
+      "price": 12,
+      "imageUrl": "/images/espeto-coracao.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 1,
+      "createdAt": "2026-10-13T23:40:53.849Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 32,
+      "name": "Espeto de Kafta com Queijo",
+      "description": "Espeto de kafta com queijo, combinando carne temperada e queijo.",
+      "price": 12,
+      "imageUrl": "/images/espeto-kafta.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 1,
+      "createdAt": "2026-10-13T23:40:54.225Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 33,
+      "name": "Espeto de Provolone",
+      "description": "Espeto de provolone, com sabor intenso de queijo.",
+      "price": 12,
+      "imageUrl": "/images/espeto-queijo.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 1,
+      "createdAt": "2026-10-13T23:40:54.595Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 34,
+      "name": "Espeto de Queijo Coalho",
+      "description": "Espeto de queijo coalho, dourado por fora e macio por dentro.",
+      "price": 12,
+      "imageUrl": "/images/espeto-queijo.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 1,
+      "createdAt": "2026-10-13T23:40:54.951Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 35,
+      "name": "Espeto de Pão de Alho",
+      "description": "Pão de alho servido no espeto, com cobertura de alho e textura dourada.",
+      "price": 10,
+      "imageUrl": "/images/espeto-pao-alho.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 1,
+      "createdAt": "2026-10-13T23:40:55.291Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 36,
+      "name": "Espeto de Picanha Grill",
+      "description": "Espeto de picanha grill, com o sabor marcante desse corte clássico do churrasco.",
+      "price": 35,
+      "imageUrl": "/images/espeto-picanha.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": true,
+      "categoryId": 8,
+      "createdAt": "2026-10-13T23:40:55.652Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 37,
+      "name": "Espeto de Contra Filé Grill",
+      "description": "Espeto de contrafilé grill, com sabor de churrasco.",
+      "price": 25,
+      "imageUrl": "/images/espeto-carne.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 8,
+      "createdAt": "2026-10-13T23:40:56.007Z",
+      "_count": {
+        "orderItems": 1
+      }
+    },
+    {
+      "id": 38,
+      "name": "Espeto de Camarão com Queijo",
+      "description": "Espeto que combina camarão e queijo.",
+      "price": 25,
+      "imageUrl": "/images/espeto-camarao.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 8,
+      "createdAt": "2026-10-13T23:40:56.411Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 39,
+      "name": "Espeto de Cupim Grill",
+      "description": "Espeto de cupim grill, um corte tradicional do churrasco.",
+      "price": 25,
+      "imageUrl": "/images/espeto-cupim.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 8,
+      "createdAt": "2026-10-13T23:40:56.899Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 40,
+      "name": "Espeto de Pão de Alho de Camarão",
+      "description": "Pão de alho com camarão, servido no espeto.",
+      "price": 30,
+      "imageUrl": "/images/espeto-camarao.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 8,
+      "createdAt": "2026-10-13T23:40:57.331Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 41,
+      "name": "Batata Frita Simples",
+      "description": "Batatas fritas douradas para petiscar ou acompanhar sua refeição. Porção de 400 g in natura.",
+      "price": 30,
+      "imageUrl": "/images/batata-simples.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 9,
+      "createdAt": "2026-10-13T23:40:57.745Z",
+      "_count": {
+        "orderItems": 1
+      }
+    },
+    {
+      "id": 42,
+      "name": "Batata Frita com Queijo e Bacon",
+      "description": "Batatas fritas com queijo e bacon. Porção de 400 g de batata in natura.",
+      "price": 35,
+      "imageUrl": "/images/batata-queijo-bacon.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 9,
+      "createdAt": "2026-10-13T23:40:58.135Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 43,
+      "name": "Bolinho de Arroz com Queijo",
+      "description": "Bolinhos de arroz com queijo, dourados por fora e macios por dentro.",
+      "price": 32,
+      "imageUrl": "/images/porcao-bolinho.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 2,
+      "createdAt": "2026-10-13T23:40:58.492Z",
+      "_count": {
+        "orderItems": 1
+      }
+    },
+    {
+      "id": 44,
+      "name": "Quibe com Queijo",
+      "description": "Quibes com recheio de queijo, dourados por fora e macios por dentro.",
+      "price": 50,
+      "imageUrl": "/images/porcao-quibe.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 2,
+      "createdAt": "2026-10-13T23:40:58.842Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 45,
+      "name": "Mini-Maia com Queijo",
+      "description": "Mini-maias com queijo, servidas em porção para petiscar.",
+      "price": 50,
+      "imageUrl": "/images/mini-maia-com-queijo.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 2,
+      "createdAt": "2026-10-13T23:40:59.189Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 46,
+      "name": "Mini-Pastel Misto",
+      "description": "Minipastéis de recheio misto, com massa dourada e crocante.",
+      "price": 50,
+      "imageUrl": "/images/mini-pastel-misto.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 2,
+      "createdAt": "2026-10-13T23:40:59.541Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 47,
+      "name": "Provolone na Pedra",
+      "description": "Provolone servido na pedra, com queijo derretido e sabor marcante.",
+      "price": 50,
+      "imageUrl": "/images/provolone-na-pedra.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 2,
+      "createdAt": "2026-10-13T23:40:59.881Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 48,
+      "name": "Moela da Casa",
+      "description": "Moela preparada com tempero da casa, servida em porção.",
+      "price": 35,
+      "imageUrl": "/images/moela-da-casa.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 2,
+      "createdAt": "2026-10-13T23:41:00.239Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 49,
+      "name": "Caldo - Vaca Atolada",
+      "description": "Caldo de vaca atolada com carne bovina e mandioca, servido quentinho.",
+      "price": 16,
+      "imageUrl": "/images/caldo-vaca-atolada.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 2,
+      "createdAt": "2026-10-13T23:41:00.580Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 50,
+      "name": "Fígado de Galinha",
+      "description": "Fígado de galinha preparado com tempero da casa, servido em porção.",
+      "price": 25,
+      "imageUrl": "/images/figado-de-galinha.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 2,
+      "createdAt": "2026-10-13T23:41:00.943Z",
+      "_count": {
+        "orderItems": 1
+      }
+    },
+    {
+      "id": 51,
+      "name": "Peixe à Gourjon",
+      "description": "Tiras de peixe empanadas e fritas, douradas e crocantes.",
+      "price": 55,
+      "imageUrl": "/images/peixe-a-gourjon.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 2,
+      "createdAt": "2026-10-13T23:41:01.291Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 52,
+      "name": "Bolinho de Bacalhau",
+      "description": "Bolinhos de bacalhau dourados, com casquinha crocante e interior macio.",
+      "price": 45,
+      "imageUrl": "/images/porcao-bolinho.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 2,
+      "createdAt": "2026-10-13T23:41:01.636Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 53,
+      "name": "Frango à Passarinho",
+      "description": "Frango em pequenos pedaços, frito e dourado, para petiscar.",
+      "price": 30,
+      "imageUrl": "/images/frango-a-passarinho.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 2,
+      "createdAt": "2026-10-13T23:41:01.982Z",
+      "_count": {
+        "orderItems": 1
+      }
+    },
+    {
+      "id": 54,
+      "name": "Jiló com Cebola",
+      "description": "Jiló preparado com cebola, com sabor característico e tempero da casa.",
+      "price": 10,
+      "imageUrl": "/images/jilo-com-cebola.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 2,
+      "createdAt": "2026-10-13T23:41:02.392Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 55,
+      "name": "Almôndega com Bacon e Mandioca",
+      "description": "Almôndegas com bacon, acompanhadas de mandioca.",
+      "price": 25,
+      "imageUrl": "/images/almondega-com-bacon-e-mandioca.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 2,
+      "createdAt": "2026-10-13T23:41:02.783Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 56,
+      "name": "Calabresa Acebolada",
+      "description": "Calabresa em rodelas com cebola, uma combinação clássica de boteco.",
+      "price": 25,
+      "imageUrl": "/images/calabresa-acebolada.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 2,
+      "createdAt": "2026-10-13T23:41:03.213Z",
+      "_count": {
+        "orderItems": 1
+      }
+    },
+    {
+      "id": 57,
+      "name": "Porção do Botequeiro",
+      "description": "Porção de salsicha, azeitona, queijo, tomate e cebola: uma combinação de boteco para petiscar.",
+      "price": 25,
+      "imageUrl": "/images/porcao-do-boteqeuiro.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 2,
+      "createdAt": "2026-10-13T23:41:03.618Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 60,
+      "name": "Heineken 600ml",
+      "description": "Cerveja Heineken em garrafa de 600 ml.",
+      "price": 14.5,
+      "imageUrl": "/images/heineken-600ml.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 12,
+      "createdAt": "2026-10-13T23:41:04.856Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 61,
+      "name": "Corona 600ml",
+      "description": "Cerveja Corona em garrafa de 600 ml.",
+      "price": 16,
+      "imageUrl": "/images/corona-600ml.jpg",
+      "active": false,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 12,
+      "createdAt": "2026-10-13T23:41:05.253Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 62,
+      "name": "Brahma 600ml",
+      "description": "Cerveja Brahma em garrafa de 600 ml, para acompanhar as porções da casa.",
+      "price": 10,
+      "imageUrl": "/images/brahma-600ml.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 12,
+      "createdAt": "2026-10-13T23:41:05.659Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 63,
+      "name": "Antártica 600ml",
+      "description": "Cerveja Antarctica em garrafa de 600 ml, para acompanhar as porções da casa.",
+      "price": 9.5,
+      "imageUrl": "/images/antartica-600ml.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 12,
+      "createdAt": "2026-10-13T23:41:06.025Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 64,
+      "name": "Original 600ml",
+      "description": "Cerveja Original em garrafa de 600 ml, para acompanhar as porções da casa.",
+      "price": 12,
+      "imageUrl": "/images/original-600ml.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 12,
+      "createdAt": "2026-10-13T23:41:06.386Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 65,
+      "name": "Kaiser 600ml",
+      "description": "Cerveja Kaiser em garrafa de 600 ml, para acompanhar as porções da casa.",
+      "price": 7.5,
+      "imageUrl": "/images/kaiser-600ml.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 12,
+      "createdAt": "2026-10-13T23:41:06.759Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 66,
+      "name": "Amstel 600ml",
+      "description": "Cerveja Amstel em garrafa de 600 ml, para acompanhar as porções da casa.",
+      "price": 9.5,
+      "imageUrl": "/images/amstel-600ml.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 12,
+      "createdAt": "2026-10-13T23:41:07.101Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 67,
+      "name": "Stella Pure Gold 600ml",
+      "description": "Cerveja Stella Artois Pure Gold em garrafa de 600 ml.",
+      "price": 16,
+      "imageUrl": "/images/stella-pure-gold-600ml.jpg",
+      "active": false,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 12,
+      "createdAt": "2026-10-13T23:41:07.442Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 68,
+      "name": "Stella Artois 600ml",
+      "description": "Cerveja Stella Artois em garrafa de 600 ml.",
+      "price": 14,
+      "imageUrl": "/images/stella-artois-600ml.jpg",
+      "active": false,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 12,
+      "createdAt": "2026-10-13T23:41:07.799Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 69,
+      "name": "Heineken Shot (Long Neck)",
+      "description": "Cerveja Heineken Shot em garrafa long neck.",
+      "price": 7.5,
+      "imageUrl": "/images/heineken-shot-long-neck.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 13,
+      "createdAt": "2026-10-13T23:41:08.156Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 70,
+      "name": "Stella Pure Gold (Long Neck)",
+      "description": "Cerveja Stella Artois Pure Gold em garrafa long neck.",
+      "price": 8.5,
+      "imageUrl": "/images/stella-pure-gold-long-neck.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 13,
+      "createdAt": "2026-10-13T23:41:08.568Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 71,
+      "name": "Ice Smirnoff",
+      "description": "Bebida alcoólica Smirnoff Ice em garrafa individual.",
+      "price": 12,
+      "imageUrl": "/images/ice-smirnoff.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 13,
+      "createdAt": "2026-10-13T23:41:08.947Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 72,
+      "name": "Ice Brutal Fruit",
+      "description": "Bebida alcoólica Brutal Fruit, com perfil frutado.",
+      "price": 15,
+      "imageUrl": "/images/ice-brutal-fruit.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 13,
+      "createdAt": "2026-10-13T23:41:09.357Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 73,
+      "name": "Império Ultra Long Neck",
+      "description": "Cerveja Império Ultra em garrafa long neck.",
+      "price": 7.5,
+      "imageUrl": "/images/imperio-ultra-long-neck.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 13,
+      "createdAt": "2026-10-13T23:41:09.772Z",
+      "_count": {
+        "orderItems": 1
+      }
+    },
+    {
+      "id": 74,
+      "name": "Original Lata",
+      "description": "Cerveja Original em lata, para acompanhar seus petiscos.",
+      "price": 5,
+      "imageUrl": "/images/original-lata.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 14,
+      "createdAt": "2026-10-13T23:41:10.180Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 75,
+      "name": "Brahma Lata",
+      "description": "Cerveja Brahma em lata, para acompanhar seus petiscos.",
+      "price": 4.5,
+      "imageUrl": "/images/brahma-lata.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 14,
+      "createdAt": "2026-10-13T23:41:10.610Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 76,
+      "name": "Antártica Azul Lata",
+      "description": "Cerveja Antarctica em lata, embalagem azul.",
+      "price": 4.5,
+      "imageUrl": "/images/antartica-azul-lata.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 14,
+      "createdAt": "2026-10-13T23:41:11.002Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 77,
+      "name": "Amstel Lata",
+      "description": "Cerveja Amstel em lata, para acompanhar seus petiscos.",
+      "price": 4.5,
+      "imageUrl": "/images/amstel-lata.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 14,
+      "createdAt": "2026-10-13T23:41:11.342Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 78,
+      "name": "Kaiser Lata",
+      "description": "Cerveja Kaiser em lata, para acompanhar seus petiscos.",
+      "price": 4,
+      "imageUrl": "/images/kaiser-lata.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 14,
+      "createdAt": "2026-10-13T23:41:11.720Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 79,
+      "name": "Brahma Zero Lata",
+      "description": "Cerveja Brahma Zero em lata, na versão sem álcool.",
+      "price": 5,
+      "imageUrl": "/images/brahma-zero-lata.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 14,
+      "createdAt": "2026-10-13T23:41:12.141Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 80,
+      "name": "Heineken Zero Lata",
+      "description": "Cerveja Heineken Zero em lata, na versão sem álcool.",
+      "price": 8,
+      "imageUrl": "/images/heineken-zero-lata.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 14,
+      "createdAt": "2026-10-13T23:41:12.511Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 81,
+      "name": "Coca-Cola Lata",
+      "description": "Refrigerante Coca-Cola em lata.",
+      "price": 6,
+      "imageUrl": "/images/coca-cola-lata.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 15,
+      "createdAt": "2026-10-13T23:41:12.877Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 82,
+      "name": "Fanta Laranja Lata",
+      "description": "Refrigerante Fanta sabor laranja em lata.",
+      "price": 6,
+      "imageUrl": "/images/fanta-laranja-lata.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 15,
+      "createdAt": "2026-10-13T23:41:13.215Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 83,
+      "name": "Guaraná Mineiro Zero Lata",
+      "description": "Refrigerante Guaraná Mineiro Zero em lata.",
+      "price": 4.5,
+      "imageUrl": "/images/guarana-mineiro-zero-lata.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 15,
+      "createdAt": "2026-10-13T23:41:13.572Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 84,
+      "name": "Limoneto Lata",
+      "description": "Bebida Limoneto em lata, com sabor de limão.",
+      "price": 6,
+      "imageUrl": "/images/limoneto-lata.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 15,
+      "createdAt": "2026-10-13T23:41:13.939Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 85,
+      "name": "Suco Del Valle Lata",
+      "description": "Suco Del Valle em lata.",
+      "price": 6,
+      "imageUrl": "/images/suco-del-valle-lata.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 15,
+      "createdAt": "2026-10-13T23:41:14.294Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 86,
+      "name": "Água Tônica Lata",
+      "description": "Água tônica em lata, com seu amargor característico.",
+      "price": 6,
+      "imageUrl": "/images/agua-tonica-lata.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 15,
+      "createdAt": "2026-10-13T23:41:14.715Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 87,
+      "name": "Red Bull (Comum ou Zero)",
+      "description": "Energético Red Bull, nas opções comum ou zero conforme a escolha.",
+      "price": 15,
+      "imageUrl": "/images/red-bull-comum-ou-zero.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 15,
+      "createdAt": "2026-10-13T23:41:15.114Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 88,
+      "name": "Extra Power (Comum ou Zero)",
+      "description": "Energético Extra Power, nas opções comum ou zero conforme a escolha.",
+      "price": 12,
+      "imageUrl": "/images/extra-power-comum-ou-zero.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 15,
+      "createdAt": "2026-10-13T23:41:15.526Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 89,
+      "name": "Coca-Cola 1 Litro",
+      "description": "Refrigerante Coca-Cola em garrafa de 1 litro.",
+      "price": 10,
+      "imageUrl": "/images/coca-cola-1-litro.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 16,
+      "createdAt": "2026-10-13T23:41:15.942Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 90,
+      "name": "Fanta 1 Litro",
+      "description": "Refrigerante Fanta em garrafa de 1 litro.",
+      "price": 10,
+      "imageUrl": "/images/fanta-1-litro.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 16,
+      "createdAt": "2026-10-13T23:41:16.366Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 91,
+      "name": "Suco Natural de Laranja 500ml",
+      "description": "Suco natural de laranja, servido em porção de 500 ml.",
+      "price": 8,
+      "imageUrl": "/images/suco-natural-de-laranja-500ml.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 17,
+      "createdAt": "2026-10-13T23:41:16.863Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 92,
+      "name": "Suco Kapo Del Valle",
+      "description": "Suco Kapo Del Valle em embalagem individual.",
+      "price": 3,
+      "imageUrl": "/images/suco-kapo-del-valle.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 17,
+      "createdAt": "2026-10-13T23:41:17.371Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 93,
+      "name": "Suco Del Valle Uva",
+      "description": "Suco Del Valle sabor uva.",
+      "price": 5,
+      "imageUrl": "/images/suco-del-valle-uva.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 17,
+      "createdAt": "2026-10-13T23:41:17.782Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 94,
+      "name": "Água com Gás 500ml",
+      "description": "Água mineral com gás, em embalagem de 500 ml.",
+      "price": 4.5,
+      "imageUrl": "/images/agua-com-gas-500ml.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 17,
+      "createdAt": "2026-10-13T23:41:18.205Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 95,
+      "name": "Água sem Gás 500ml",
+      "description": "Água mineral sem gás, em embalagem de 500 ml.",
+      "price": 4,
+      "imageUrl": "/images/agua-sem-gas-500ml.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 17,
+      "createdAt": "2026-10-13T23:41:18.558Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 96,
+      "name": "Dose de Campari",
+      "description": "Dose individual de Campari, aperitivo de sabor amargo marcante.",
+      "price": 15,
+      "imageUrl": "/images/dose-de-campari.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 18,
+      "createdAt": "2026-10-13T23:41:18.917Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 97,
+      "name": "Dose de Vodka",
+      "description": "Dose individual de vodka.",
+      "price": 10,
+      "imageUrl": "/images/dose-de-vodka.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 18,
+      "createdAt": "2026-10-13T23:41:19.291Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 98,
+      "name": "Dose de Whisky",
+      "description": "Dose individual de whisky.",
+      "price": 15,
+      "imageUrl": "/images/dose-de-whisky.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 18,
+      "createdAt": "2026-10-13T23:41:19.637Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 99,
+      "name": "Dose de Gin",
+      "description": "Dose individual de gin.",
+      "price": 10,
+      "imageUrl": "/images/dose-de-gin.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 18,
+      "createdAt": "2026-10-13T23:41:19.975Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 100,
+      "name": "Dose de Cachaça",
+      "description": "Dose de cachaça servida individualmente.",
+      "price": 5,
+      "imageUrl": "/images/dose-de-cachaca.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 18,
+      "createdAt": "2026-10-13T23:41:20.383Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 101,
+      "name": "Caipirinha",
+      "description": "Caipirinha preparada com cachaça, um clássico para acompanhar os petiscos.",
+      "price": 15,
+      "imageUrl": "/images/caipirinha.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 18,
+      "createdAt": "2026-10-13T23:41:20.777Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 102,
+      "name": "Caipivodka",
+      "description": "Caipivodka preparada com vodka, para acompanhar os petiscos da casa.",
+      "price": 15,
+      "imageUrl": "/images/caipivodka.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 18,
+      "createdAt": "2026-10-13T23:41:21.177Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 103,
+      "name": "Arroz",
+      "description": "Porção adicional de arroz para completar sua refeição.",
+      "price": 6,
+      "imageUrl": "/images/arroz.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 19,
+      "createdAt": "2026-10-13T23:41:21.559Z",
+      "_count": {
+        "orderItems": 1
+      }
+    },
+    {
+      "id": 104,
+      "name": "Feijão Tropeiro",
+      "description": "Feijão tropeiro, acompanhamento tradicional para carnes e espetos.",
+      "price": 10,
+      "imageUrl": "/images/feijao-tropeiro.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 19,
+      "createdAt": "2026-10-13T23:41:21.921Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 105,
+      "name": "Mandioca",
+      "description": "Porção adicional de mandioca para acompanhar sua refeição.",
+      "price": 5,
+      "imageUrl": "/images/mandioca.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 19,
+      "createdAt": "2026-10-13T23:41:22.262Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 106,
+      "name": "Banana Frita",
+      "description": "Banana frita, um acompanhamento que combina com carnes e jantinhas.",
+      "price": 4,
+      "imageUrl": "/images/banana-frita.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 19,
+      "createdAt": "2026-10-13T23:41:22.620Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 107,
+      "name": "Ovo Frito",
+      "description": "Ovo frito para acrescentar ao seu prato.",
+      "price": 4,
+      "imageUrl": "/images/ovo-frito.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 19,
+      "createdAt": "2026-10-13T23:41:23.071Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 108,
+      "name": "CDB",
+      "description": "Adicional CDB para complementar seu pedido.",
+      "price": 5,
+      "imageUrl": "/images/cdb.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 19,
+      "createdAt": "2026-10-13T23:41:23.949Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 109,
+      "name": "Copo Especial",
+      "description": "Copo especial, disponível como adicional ao pedido.",
+      "price": 3,
+      "imageUrl": "/images/copo-especial.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 19,
+      "createdAt": "2026-10-13T23:41:24.378Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 111,
+      "name": "Picanha Shalon",
+      "description": "Picanha para 2 pessoas, com 400 g de carne in natura. Acompanha arroz, feijão tropeiro, vinagrete, mandioca, batata frita e banana frita.",
+      "price": 120,
+      "imageUrl": "/images/espeto-picanha.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": true,
+      "categoryId": 11,
+      "createdAt": "2026-10-20T01:14:05.798Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 112,
+      "name": "Chorizo",
+      "description": "Chorizo para 2 pessoas, com 400 g de contrafilé in natura. Acompanha arroz, feijão tropeiro, vinagrete, mandioca, batata frita e banana frita.",
+      "price": 109.9,
+      "imageUrl": "/images/chorizo.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": true,
+      "categoryId": 11,
+      "createdAt": "2026-10-20T01:14:06.226Z",
+      "_count": {
+        "orderItems": 0
+      }
+    },
+    {
+      "id": 113,
+      "name": "Tomate com Cebola",
+      "description": "Tomate com cebola para complementar sua refeição.",
+      "price": 12,
+      "imageUrl": "/images/tomate-com-cebola.jpg",
+      "active": true,
+      "deleted": false,
+      "featured": false,
+      "categoryId": 19,
+      "createdAt": "2026-10-20T01:14:27.173Z",
+      "_count": {
+        "orderItems": 0
+      }
+    }
+  ]
+}
