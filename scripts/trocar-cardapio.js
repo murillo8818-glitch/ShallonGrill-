@@ -90,8 +90,13 @@ async function main() {
   const pastaImagens = path.join(__dirname, '..', 'public', 'images');
   let criados = 0, atualizados = 0, comFoto = 0;
   for (const { cat, img, ...p } of PRODUTOS) {
-    const temArquivo = img && fs.existsSync(path.join(pastaImagens, `${img}.jpg`));
-    const imageUrl = temArquivo ? `/images/${img}.jpg` : undefined;
+    let imageUrl = undefined;
+    if (img && img.startsWith('/images/')) {
+      const arq = path.join(__dirname, '..', 'public', img);
+      if (fs.existsSync(arq)) imageUrl = img;
+    } else if (img && fs.existsSync(path.join(pastaImagens, `${img}.jpg`))) {
+      imageUrl = `/images/${img}.jpg`;
+    }
     if (imageUrl) comFoto++;
     const data = {
       name: p.name,

@@ -183,7 +183,13 @@ export default function ProductsPage() {
               <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
                 {product.imageUrl ? (
                   <div style={{ width: '72px', height: '72px', borderRadius: '8px', overflow: 'hidden', flexShrink: 0, position: 'relative' }}>
-                    <Image src={product.imageUrl} alt={product.name} fill style={{ objectFit: 'cover' }} sizes="72px" />
+                    <Image
+                      src={product.imageUrl.replace(/^https?:\/\/(shallon-grill\.vercel\.app|localhost(:\d+)?)/, '')}
+                      alt={product.name}
+                      fill
+                      style={{ objectFit: 'cover' }}
+                      sizes="72px"
+                    />
                   </div>
                 ) : (
                   <div style={{ width: '72px', height: '72px', background: 'var(--color-bg-base)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2rem', flexShrink: 0 }}>
