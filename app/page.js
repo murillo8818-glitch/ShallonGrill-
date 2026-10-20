@@ -133,7 +133,7 @@ function MenuContent() {
       <Footer />
 
       <CartDrawer onCheckout={handleCheckout} />
-      <FloatingFABs onCartClick={() => {}} />
+      <FloatingFABs />
 
       {showCheckout && (
         <CheckoutModal onClose={() => setShowCheckout(false)} />

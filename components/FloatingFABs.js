@@ -2,7 +2,14 @@
 import { useCart } from '@/contexts/CartContext';
 
 export default function FloatingFABs({ onCartClick }) {
-  const { count } = useCart();
+  const { count, setIsOpen } = useCart();
+
+  const handleCartClick = () => {
+    if (typeof onCartClick === 'function') {
+      onCartClick();
+    }
+    setIsOpen(true);
+  };
 
   return (
     <div className="fab-container">
@@ -22,7 +29,7 @@ export default function FloatingFABs({ onCartClick }) {
       <button
         id="cart-fab"
         className="fab fab-cart"
-        onClick={onCartClick}
+        onClick={handleCartClick}
         aria-label="Abrir carrinho"
       >
         🛒

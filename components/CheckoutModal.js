@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useCart } from '@/contexts/CartContext';
 
 function formatPrice(price) {
@@ -13,12 +13,29 @@ export default function CheckoutModal({ onClose }) {
     customerPhone: '',
     type: 'mesa',
     tableNumber: '',
-    address: '',
     notes: '',
   });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
+
+  const nameInputRef = useRef(null);
+
+  // Foco inicial, trava de rolagem no fundo e tecla Escape
+  useEffect(() => {
+    nameInputRef.current?.focus();
+    document.body.style.overflow = 'hidden';
+
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [onClose]);
 
   const handleChange = (e) => {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
@@ -26,16 +43,51 @@ export default function CheckoutModal({ onClose }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
     setError('');
 
+    // Validações rigorosas
+    const nomeLimpo = form.customerName.trim();
+    if (!nomeLimpo) {
+      setError('Por favor, informe seu nome.');
+      return;
+    }
+
+    const digitosTelefone = form.customerPhone.replace(/\D/g, '');
+    if (digitosTelefone.length < 8) {
+      setError('Por favor, informe um número de WhatsApp válido.');
+      return;
+    }
+
+    const numMesa = parseInt(form.tableNumber, 10);
+    if (!numMesa || numMesa <= 0) {
+      setError('Por favor, informe um número de mesa válido (maior que 0).');
+      return;
+    }
+
+    setLoading(true);
+
     const orderItems = items.map((i) => ({ productId: i.id, quantity: i.quantity }));
+
+    // Registra opções escolhidas nas observações para a cozinha
+    const itensComOpcao = items
+      .filter((i) => i.option)
+      .map((i) => `${i.quantity}x ${i.name} [Opção: ${i.option}]`)
+      .join(', ');
+
+    const observacoesFinais = [itensComOpcao, form.notes.trim()].filter(Boolean).join(' | ');
 
     try {
       const res = await fetch('/api/orders', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form, items: orderItems }),
+        body: JSON.stringify({
+          customerName: nomeLimpo,
+          customerPhone: form.customerPhone.trim(),
+          type: 'mesa',
+          tableNumber: String(numMesa),
+          notes: observacoesFinais,
+          items: orderItems,
+        }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Erro ao enviar pedido');
@@ -59,7 +111,7 @@ export default function CheckoutModal({ onClose }) {
               Pedido Enviado!
             </h2>
             <p style={{ color: 'var(--color-text-muted)', margin: '12px 0 24px' }}>
-              A cozinha ja esta preparando o seu pedido!
+              A cozinha já está preparando o seu pedido para a mesa!
             </p>
             <button id="checkout-close-btn" className="btn btn-primary btn-full" onClick={onClose}>
               Fechar
@@ -88,6 +140,7 @@ export default function CheckoutModal({ onClose }) {
           <div className="form-group">
             <label className="form-label" htmlFor="checkout-name">Seu Nome</label>
             <input
+              ref={nameInputRef}
               id="checkout-name"
               name="customerName"
               className="form-input"
@@ -112,47 +165,23 @@ export default function CheckoutModal({ onClose }) {
           </div>
 
           <div className="form-group">
-            <label className="form-label">Tipo de Pedido</label>
-            <div className="radio-group">
-              <button
-                type="button"
-                id="checkout-type-mesa"
-                className={`radio-option ${form.type === 'mesa' ? 'active' : ''}`}
-                onClick={() => setForm((f) => ({ ...f, type: 'mesa' }))}
-              >
-                🪑 Mesa
-              </button>
-              <button
-                type="button"
-                id="checkout-type-entrega"
-                className={`radio-option ${form.type === 'entrega' ? 'active' : ''}`}
-                onClick={() => setForm((f) => ({ ...f, type: 'entrega' }))}
-              >
-                🛵 Entrega
-              </button>
-            </div>
+            <label className="form-label" htmlFor="checkout-table">Número da Mesa</label>
+            <input
+              id="checkout-table"
+              name="tableNumber"
+              type="text"
+              inputMode="numeric"
+              pattern="[0-9]*"
+              className="form-input"
+              placeholder="Ex: 5"
+              value={form.tableNumber}
+              onChange={(e) => {
+                const apenasNumeros = e.target.value.replace(/\D/g, '');
+                setForm((f) => ({ ...f, tableNumber: apenasNumeros }));
+              }}
+              required
+            />
           </div>
-
-          {form.type === 'mesa' && (
-            <div className="form-group">
-              <label className="form-label" htmlFor="checkout-table">Número da Mesa</label>
-              <input
-                id="checkout-table"
-                name="tableNumber"
-                type="text"
-                inputMode="numeric"
-                pattern="[0-9]*"
-                className="form-input"
-                placeholder="Ex: 5"
-                value={form.tableNumber}
-                onChange={(e) => {
-                  const apenasNumeros = e.target.value.replace(/\D/g, '');
-                  setForm((f) => ({ ...f, tableNumber: apenasNumeros }));
-                }}required
-              />
-            </div>
-          )}
-
 
           <div className="form-group">
             <label className="form-label" htmlFor="checkout-notes">Observações (opcional)</label>
@@ -174,11 +203,22 @@ export default function CheckoutModal({ onClose }) {
               Resumo
             </p>
             {items.map((item) => (
-              <div key={item.id} style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem', padding: '2px 0' }}>
-                <span>{item.quantity}x {item.name}</span>
+              <div key={item.cartKey || item.id} style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem', padding: '4px 0' }}>
+                <div>
+                  <span>{item.quantity}x {item.name}</span>
+                  {item.option && (
+                    <span style={{ display: 'block', fontSize: '0.75rem', color: 'var(--color-primary)' }}>
+                      • {item.option}
+                    </span>
+                  )}
+                </div>
                 <span style={{ color: 'var(--color-primary)' }}>{formatPrice(item.price * item.quantity)}</span>
               </div>
             ))}
+
+            <p style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)', marginTop: '8px', borderTop: '1px solid var(--color-border)', paddingTop: '6px' }}>
+              💳 Pagamento realizado diretamente na mesa (Cartão, Pix ou Dinheiro).
+            </p>
           </div>
 
           <div className="modal-footer" style={{ padding: '0', display: 'flex', gap: '10px' }}>

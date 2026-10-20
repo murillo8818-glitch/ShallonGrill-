@@ -69,7 +69,7 @@ const PRODUTOS = [
   { cat: 'porcoes', name: 'Jiló com Cebola', price: 10 },
   { cat: 'porcoes', name: 'Almôndega com Bacon e Mandioca', price: 25 },
   { cat: 'porcoes', name: 'Calabresa Acebolada', price: 28 },
-  { cat: 'porcoes', name: 'Porção do Boteqeuiro', price: 30 },
+  { cat: 'porcoes', name: 'Porção do Botequeiro', price: 30 },
 
   // ── PICANHA / CHORIZO ─────────────────────────────────────────────────────
   { cat: 'pratos', name: 'Picanha Shalon', price: 119.9, featured: true,

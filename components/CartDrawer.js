@@ -1,4 +1,5 @@
 'use client';
+import { useEffect } from 'react';
 import { useCart } from '@/contexts/CartContext';
 
 function formatPrice(price) {
@@ -7,6 +8,15 @@ function formatPrice(price) {
 
 export default function CartDrawer({ onCheckout }) {
   const { items, isOpen, setIsOpen, updateQty, removeItem, total, count } = useCart();
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setIsOpen(false);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, setIsOpen]);
 
   if (!isOpen) return null;
 
@@ -36,43 +46,51 @@ export default function CartDrawer({ onCheckout }) {
               </p>
             </div>
           ) : (
-            items.map((item) => (
-              <div key={item.id} className="cart-item">
-                <div className="cart-item-info">
-                  <p className="cart-item-name">{item.name}</p>
-                  <p className="cart-item-price">{formatPrice(item.price * item.quantity)}</p>
-                </div>
+            items.map((item) => {
+              const itemKey = item.cartKey || item.id;
+              return (
+                <div key={itemKey} className="cart-item">
+                  <div className="cart-item-info">
+                    <p className="cart-item-name">{item.name}</p>
+                    {item.option && (
+                      <p style={{ fontSize: '0.75rem', color: 'var(--color-primary)', marginTop: '2px' }}>
+                        Opção: {item.option}
+                      </p>
+                    )}
+                    <p className="cart-item-price">{formatPrice(item.price * item.quantity)}</p>
+                  </div>
 
-                <div className="cart-qty-controls">
+                  <div className="cart-qty-controls">
+                    <button
+                      id={`cart-minus-${itemKey}`}
+                      className="qty-btn"
+                      onClick={() => updateQty(itemKey, item.quantity - 1)}
+                      aria-label="Diminuir quantidade"
+                    >
+                      −
+                    </button>
+                    <span className="qty-value">{item.quantity}</span>
+                    <button
+                      id={`cart-plus-${itemKey}`}
+                      className="qty-btn"
+                      onClick={() => updateQty(itemKey, item.quantity + 1)}
+                      aria-label="Aumentar quantidade"
+                    >
+                      +
+                    </button>
+                  </div>
+
                   <button
-                    id={`cart-minus-${item.id}`}
-                    className="qty-btn"
-                    onClick={() => updateQty(item.id, item.quantity - 1)}
-                    aria-label="Diminuir quantidade"
+                    id={`cart-remove-${itemKey}`}
+                    onClick={() => removeItem(itemKey)}
+                    style={{ color: 'var(--color-danger)', fontSize: '1.1rem', padding: '4px', marginLeft: '4px' }}
+                    aria-label="Remover item"
                   >
-                    −
-                  </button>
-                  <span className="qty-value">{item.quantity}</span>
-                  <button
-                    id={`cart-plus-${item.id}`}
-                    className="qty-btn"
-                    onClick={() => updateQty(item.id, item.quantity + 1)}
-                    aria-label="Aumentar quantidade"
-                  >
-                    +
+                    🗑
                   </button>
                 </div>
-
-                <button
-                  id={`cart-remove-${item.id}`}
-                  onClick={() => removeItem(item.id)}
-                  style={{ color: 'var(--color-danger)', fontSize: '1.1rem', padding: '4px', marginLeft: '4px' }}
-                  aria-label="Remover item"
-                >
-                  🗑
-                </button>
-              </div>
-            ))
+              );
+            })
           )}
         </div>
 
