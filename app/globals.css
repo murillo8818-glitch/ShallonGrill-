@@ -416,7 +416,7 @@ input, textarea, select {
 .product-card-image-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 16/10;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   background: var(--color-bg-elevated);
 }
@@ -430,7 +430,7 @@ input, textarea, select {
 
 .product-card-no-image {
   width: 100%;
-  aspect-ratio: 16/10;
+  aspect-ratio: 1 / 1;
   background: var(--color-bg-elevated);
   display: flex;
   align-items: center;
