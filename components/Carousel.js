@@ -2,14 +2,9 @@
 import { useState, useRef, useCallback } from 'react';
 import Image from 'next/image';
 
-const IMAGES = [
-  { src: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&q=80', alt: 'Espetinho na Brasa' },
-  { src: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80', alt: 'Carne Grelhada' },
-  { src: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&q=80', alt: 'Ambiente Shalon' },
-  { src: 'https://images.unsplash.com/photo-1556656736-4c8d5dc7e8cb?w=600&q=80', alt: 'Churrasco Especial' },
-  { src: 'https://images.unsplash.com/photo-1577785565578-1a9805d2c207?w=600&q=80', alt: 'Caipirinha' },
-  { src: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=600&q=80', alt: 'Churrasqueira' },
-];
+import { IMAGENS } from '@/config/site';
+
+const IMAGES = IMAGENS.carrossel || [];
 
 const SLIDES_VISIBLE = 3;
 

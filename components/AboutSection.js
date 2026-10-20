@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import { SITE } from '@/config/site';
+import { SITE, IMAGENS } from '@/config/site';
 
 export default function AboutSection() {
   return (
@@ -46,7 +46,7 @@ export default function AboutSection() {
 
         <div className="fade-in fade-in-delay-3" style={{ position: 'relative', height: '320px', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--color-border)' }}>
           <Image
-            src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&q=80"
+            src={IMAGENS.sobre || 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&q=80'}
             alt="Interior do Shalon Grill"
             fill
             style={{ objectFit: 'cover' }}
