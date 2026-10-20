@@ -150,8 +150,11 @@ const PRODUTOS = [
 //  Para adicionar uma foto: salve em public/images/<nome>.jpg, coloque a linha
 //  abaixo (ou ajuste) e rode `npm run db:cardapio`.
 const IMAGENS = {
-  'Jantinha Shalon': 'jantinha',
+  // Pratos e Jantinha
+  'Jantinha Shalon': '/images/jantinha.jpg',
+  'Picanha Shalon': '/images/produtos/picanha-shalon.webp',
 
+  // Espetos
   'Espeto de Franbacon': 'espeto-franbacon',
   'Espeto de Cupim': 'espeto-cupim',
   'Espeto de Capa de Filé': 'espeto-carne',
@@ -162,20 +165,50 @@ const IMAGENS = {
   'Espeto de Queijo Coalho': 'espeto-queijo',
   'Espeto de Pão de Alho': 'espeto-pao-alho',
 
+  // Espetos Especiais
   'Espeto de Picanha Grill': 'espeto-picanha',
   'Espeto de Contra Filé Grill': 'espeto-carne',
   'Espeto de Camarão com Queijo': 'espeto-camarao',
   'Espeto de Cupim Grill': 'espeto-cupim',
-  'Espeto de Pão de Alho de Camarão': 'espeto-camarao',
+  'Espeto de Pão de Alho de Camarão': '/images/produtos/pao-de-alho-camarao.webp',
 
+  // Batatas
   'Batata Frita Simples': 'batata-simples',
   'Batata Frita com Queijo e Bacon': 'batata-queijo-bacon',
 
-  'Bolinho de Arroz com Queijo': 'porcao-bolinho',
-  'Bolinho de Bacalhau': 'porcao-bolinho',
-  'Quibe com Queijo': 'porcao-quibe',
+  // Porções (todas as 15 com fotos reais)
+  'Bolinho de Arroz com Queijo': '/images/produtos/bolinho-arroz-com-queijo.webp',
+  'Quibe com Queijo': '/images/produtos/quibe-com-queijo.webp',
+  'Mini-Maia com Queijo': '/images/produtos/mini-maia-com-queijo.webp',
+  'Mini-Pastel Misto': '/images/produtos/mini-pastel-misto.webp',
+  'Provolone na Pedra': '/images/produtos/provolone-na-pedra.webp',
+  'Moela da Casa': '/images/produtos/moela-da-casa.webp',
+  'Caldo - Vaca Atolada': '/images/produtos/caldo-vaca-atolada.webp',
+  'Fígado de Galinha': '/images/produtos/figado-de-galinha.webp',
+  'Peixe à Gourjon': '/images/produtos/peixe-a-gourjon.webp',
+  'Bolinho de Bacalhau': '/images/produtos/bolinho-de-bacalhau.webp',
+  'Frango à Passarinho': '/images/produtos/frango-a-passarinho.webp',
+  'Jiló com Cebola': '/images/produtos/jilo-com-cebola.webp',
+  'Almôndega com Bacon e Mandioca': '/images/produtos/almondega-com-bacon-e-mandioca.webp',
+  'Calabresa Acebolada': '/images/produtos/calabresa-acebolada.webp',
+  'Porção do Botequeiro': '/images/produtos/porcao-do-botequeiro.webp',
 
-  'Picanha Shalon': 'espeto-picanha',
+  // Cervejas 600ml
+  'Brahma 600ml': '/images/produtos/brahma-600ml.webp',
+  'Antártica 600ml': '/images/produtos/antartica-600ml.webp',
+  'Original 600ml': '/images/produtos/original-600ml.webp',
+  'Kaiser 600ml': '/images/produtos/kaiser-600ml.webp',
+  'Amstel 600ml': '/images/produtos/amstel-600ml.webp',
+
+  // Long Neck
+  'Stella Pure Gold (Long Neck)': '/images/produtos/stella-pure-gold-long-neck.webp',
+
+  // Cervejas Lata
+  'Original Lata': '/images/produtos/original-lata.webp',
+  'Brahma Lata': '/images/produtos/brahma-lata.webp',
+  'Antártica Azul Lata': '/images/produtos/antartica-azul-lata.webp',
+  'Amstel Lata': '/images/produtos/amstel-lata.webp',
+  'Kaiser Lata': '/images/produtos/kaiser-lata.webp',
 };
 
 // Nome do produto -> nome de arquivo seguro (ex.: "Heineken 600ml" -> "heineken-600ml")

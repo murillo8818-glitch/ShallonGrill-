@@ -40,9 +40,15 @@ export default function ProductCard({ product }) {
   const { addItem } = useCart();
   const [showOptionsModal, setShowOptionsModal] = useState(false);
   const [selectedOption, setSelectedOption] = useState('');
+  const [imgError, setImgError] = useState(false);
 
   const catIcon = product.category?.icon || '🍽️';
   const optionsConfig = getProductOptionsConfig(product);
+
+  // Normaliza caminhos que porventura tenham o domínio absoluto do site
+  const normalizedImageUrl = product.imageUrl
+    ? product.imageUrl.replace(/^https?:\/\/(shallon-grill\.vercel\.app|localhost(:\d+)?)/, '')
+    : null;
 
   useEffect(() => {
     if (!showOptionsModal) return;
@@ -77,14 +83,15 @@ export default function ProductCard({ product }) {
     <>
       <div className="product-card" id={`product-card-${product.id}`}>
         <div className="product-card-image-wrapper">
-          {product.imageUrl ? (
+          {normalizedImageUrl && !imgError ? (
             <Image
-              src={product.imageUrl}
+              src={normalizedImageUrl}
               alt={product.name}
               fill
               sizes="(max-width: 480px) 50vw, (max-width: 768px) 45vw, 280px"
               style={{ objectFit: 'cover' }}
               loading="lazy"
+              onError={() => setImgError(true)}
             />
           ) : (
             <div className="product-card-no-image">{catIcon}</div>
