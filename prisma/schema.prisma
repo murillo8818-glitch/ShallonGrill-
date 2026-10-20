@@ -52,6 +52,7 @@ model Product {
   price       Float                  // 8.00
   imageUrl    String?                // link da foto (https://... ou /images/...)
   active      Boolean     @default(true)  // false = escondido do cardápio
+  deleted     Boolean     @default(false) // true = apagado (some do painel também; mantido só p/ histórico de pedidos)
   featured    Boolean     @default(false) // true = selo "⭐ Destaque" e aparece primeiro
   categoryId  Int                         // a qual categoria pertence
   category    Category    @relation(fields: [categoryId], references: [id])

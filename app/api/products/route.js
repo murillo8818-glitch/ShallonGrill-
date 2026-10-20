@@ -9,7 +9,7 @@ export async function GET(request) {
     const categoryId = searchParams.get('categoryId');
     const all = searchParams.get('all'); // admin: show inactive too
 
-    const where = all ? {} : { active: true };
+    const where = all ? { deleted: false } : { active: true, deleted: false };
     if (categoryId) where.categoryId = parseInt(categoryId);
 
     const products = await prisma.product.findMany({

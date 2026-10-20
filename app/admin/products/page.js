@@ -109,11 +109,12 @@ export default function ProductsPage() {
   };
 
   const handleDelete = async (product) => {
-    if (!window.confirm(`Remover "${product.name}"?`)) return;
-    await fetch(`/api/products/${product.id}`, {
+    if (!window.confirm(`Apagar "${product.name}" definitivamente?\n\n(Para só esconder do cardápio, use "Desativar".)`)) return;
+    const res = await fetch(`/api/products/${product.id}`, {
       method: 'DELETE',
       headers: { Authorization: `Bearer ${token}` },
     });
+    if (!res.ok) alert('Não foi possível apagar o produto. Tente novamente.');
     fetchData();
   };
 
