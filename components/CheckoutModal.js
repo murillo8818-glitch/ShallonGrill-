@@ -153,20 +153,6 @@ export default function CheckoutModal({ onClose }) {
             </div>
           )}
 
-          {form.type === 'entrega' && (
-            <div className="form-group">
-              <label className="form-label" htmlFor="checkout-address">Endereço de Entrega</label>
-              <input
-                id="checkout-address"
-                name="address"
-                className="form-input"
-                placeholder="Rua, número, bairro"
-                value={form.address}
-                onChange={handleChange}
-                required
-              />
-            </div>
-          )}
 
           <div className="form-group">
             <label className="form-label" htmlFor="checkout-notes">Observações (opcional)</label>
