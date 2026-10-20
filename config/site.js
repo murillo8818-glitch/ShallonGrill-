@@ -21,8 +21,14 @@ export const SITE = {
   nomeTopo: 'SHALON',          // 1ª linha grande do título da página inicial
   nomeBaixo: 'GRILL',          // 2ª linha (laranja) do título
   slogan: 'O Espetinho que você nunca viu',
-  cidade: 'Uberlândia - MG',
-  endereco: 'Rua Abadia dos Dourados, nº 472',
+  cidade: 'Araguari - MG',
+  endereco: 'R. Abadia dos Dourados, 472',
+  bairro: 'Jóquei Clube',
+  cep: '38444-290',
+  // Link "Como chegar" (abre o Google Maps no endereço acima)
+  mapsUrl:
+    'https://www.google.com/maps/search/?api=1&query=' +
+    encodeURIComponent('R. Abadia dos Dourados, 472 - Jóquei Clube, Araguari - MG, 38444-290'),
 
   horarioDias: 'Segunda a Sexta-feira',
   horarioHoras: 'Aberto a partir das 18:00',

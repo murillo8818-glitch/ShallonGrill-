@@ -6,8 +6,8 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata = {
   title: 'Shalon Grill | Cardápio Digital',
-  description: 'O melhor espetinho de Uberlândia. Peça pelo nosso cardápio digital!',
-  keywords: 'espetinho, churrasco, cardápio, shalon grill, uberlândia',
+  description: 'O melhor espetinho de Araguari. Peça pelo nosso cardápio digital!',
+  keywords: 'espetinho, churrasco, cardápio, shalon grill, araguari, jóquei clube',
   openGraph: {
     title: 'Shalon Grill | Cardápio Digital',
     description: 'O espetinho que você nunca viu. Peça agora!',

@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import { SITE } from '@/config/site';
 
 export default function AboutSection() {
   return (
@@ -8,8 +9,16 @@ export default function AboutSection() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
           <div className="info-card fade-in">
             <h3>📍 Endereço</h3>
-            <p>Rua Abadia dos Dourados, nº 472</p>
-            <p style={{ marginTop: '4px', color: 'var(--color-text-muted)', fontSize: '0.85rem' }}>Uberlândia - MG</p>
+            <p>{SITE.endereco} - {SITE.bairro}</p>
+            <p style={{ marginTop: '4px', color: 'var(--color-text-muted)', fontSize: '0.85rem' }}>
+              {SITE.cidade} · CEP {SITE.cep}
+            </p>
+            <p style={{ marginTop: '8px' }}>
+              <a id="about-maps-link" href={SITE.mapsUrl} target="_blank" rel="noopener noreferrer"
+                 style={{ color: 'var(--color-primary)', fontSize: '0.85rem' }}>
+                🗺️ Como chegar
+              </a>
+            </p>
           </div>
 
           <div className="info-card fade-in fade-in-delay-1">
